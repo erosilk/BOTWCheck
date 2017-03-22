@@ -1,16 +1,22 @@
 head
   title BOTW Check
-  <link rel="manifest" href="/manifest.json">
-  <script>
-    var OneSignal = window.OneSignal || [];
-    OneSignal.push(["init", {
+  script(src="https://cdn.onesignal.com/sdks/OneSignalSDK.js", async='async')
+  script.
+      var OneSignal = window.OneSignal || [];
+      OneSignal.push(["init", {
       appId: "9a4ad6a3-551e-4ea8-8a05-f93c9005153c",
-      autoRegister: false,
+      autoRegister: false, /* Set to true to automatically prompt visitors */
+      subdomainName: 'botwcheck',
+      /*
+      subdomainName: Use the value you entered in step 1.4: http://imgur.com/a/f6hqN
+      */
+      httpPermissionRequest: {
+          enable: true
+      },
       notifyButton: {
-        enable: true /* Set to false to hide */
+          enable: true /* Set to false to hide */
       }
-    }]);
-  </script>
+      }]);
   link(rel="stylesheet", href="css/style.css")
   link(rel="stylesheet", href="css/normalize.css")
   link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Raleway")
@@ -23,10 +29,9 @@ body
   h2 The game is not quite playable yet!
   .notification
     .mainnotification
-      p Want to be notified when it is?
+      p Want to be notified when it's playable?<br/> Click the bell on the bottom right corner!
       h5 <i>(I'll only notify you of important stuff, promise!)</i>
-    .button
-      button Yes! Notify me!
+
       
   h3 Here is some more information:
   .footer
