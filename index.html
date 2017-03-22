@@ -1,15 +1,21 @@
 <head>
     <title>BOTW Check</title>
-    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
     <script>
         var OneSignal = window.OneSignal || [];
         OneSignal.push(["init", {
         appId: "9a4ad6a3-551e-4ea8-8a05-f93c9005153c",
-        autoRegister: false,
+        autoRegister: false, /* Set to true to automatically prompt visitors */
+        subdomainName: 'botwcheck',
+        /*
+        subdomainName: Use the value you entered in step 1.4: http://imgur.com/a/f6hqN
+        */
+        httpPermissionRequest: {
+            enable: true
+        },
         notifyButton: {
             enable: true /* Set to false to hide */
-        },
-        path: '/BOTWCheck/'
+        }
         }]);
     </script>
     <link rel="stylesheet" href="css/style.css" />
