@@ -28,47 +28,41 @@ head
     ga('send', 'pageview');
 
   link(rel="stylesheet", href="css/style.css")
-  link(rel="stylesheet", href="css/goodnews.css")
-  link(rel="stylesheet", href="css/bootstrap.min.css")
   link(rel="stylesheet", href="css/normalize.css")
+  link(rel="stylesheet", href="css/bootstrap.min.css")
   link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Raleway")
   link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
   link(rel="shortcut icon", href="favicon.png")
 
 body
  .container
-  h1 Big news!
-  h2 CEMU 1.7.4 released for Patreon supporters!
-  h2 Most issues were fixed, and the game is a lot more playable ...
+  h1 Well...
+  h2 The game is not quite playable yet!
   .notification
-    p Links:
-    .links
-      a(href="http://cemu.info/") CEMU Website
-      a(href="https://www.reddit.com/r/cemu/") CEMU Subreddit
     .mainnotification
-      p Want to be notified for more updates?<br/> Click the bell on the bottom right corner!
+      p Want to be notified when it's playable?<br/> Click the bell on the bottom right corner!
       h5 <i>(I'll only notify you of important stuff, promise!)</i>
 
       
   h3 Here is some more information:
-  .footer
-    .left
+  .footer.row
+    .left.col-md-5.col-sm-12
       .issues
-        h4 Known Issues (thanks u/Network_operations):
+        h4 Known Issues:
         ul
-            li AMD users experiencing issues with grass now but try <a href="https://www.reddit.com/r/cemu/comments/62wu38/botw_megathread_2_174_edition/dfpqmwe/">this</a>.
-            li Camera locking issues.
-            li Amiibos don't fully function
-            li Monsters render weird when at a distance.
-            li Some people still having the same bugs from 1.7.3d ( sinking into the ground, no grass, etc...).
-            li Game not loading, try 1.7.4b. If that doesn't work then your file might be corrupted.
+          li FPS drops and stuttering.
+          li Missing textures and (AMD GPU) flashing textures.
+          li Abilities (Magnesis and Stasis) not working
+          li Broken waypoints.
+          li Cutscenes not working.
+          li Frequent softlocks.
     .separator
-    .right
+    .right.col-md-5.col-sm-12
       .information
       h4 More information:
       ul
-        li Current CEMU release: 1.7.4 (<strong>Only for Patreon Supporters</strong>, everyone else will get it on April 9th).
-
+        li Current CEMU release: 1.7.3d
+        li Next CEMU release (1.7.4) will probably fix most issues. It's release date is April 2nd for patreons and a week later for everyone else.
       .documentation
       h4 Documentation:
       ul

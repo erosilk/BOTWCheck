@@ -42,33 +42,22 @@ body {
   h1 {
     font-size: 5em;
     margin: 0;
-    @include breakpoint(sm){
-      font-size: 10em;
-    }
   }
 
   h2 {
     font-size: 3em;
     margin: 10px 0;
-    @include breakpoint(sm){
-      font-size: 6em;
-    }
+
   }
 
   h5 {
     margin-top: 0;
-    @include breakpoint(sm){
-      font-size: 3em;
-      text-align: center
-    }
+
   }
 
   p {
     font-size: 2em;
-    @include breakpoint(sm){
-      font-size: 4em;
-      text-align: center;
-    }
+
   }
 
   .notification {
@@ -92,9 +81,10 @@ body {
 
 .footer {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
+
 
   .left {
     display: flex;
@@ -102,6 +92,7 @@ body {
     justify-content: center;
     padding: 20px;
     margin: 10px;
+    width: 50%;
 
   }
 
@@ -114,25 +105,26 @@ body {
   .right {
     padding: 20px;
     margin: 10px;
+    width: 49%;
+
+    a {
+      color: #0C0C0A;
+      transition: all 0.1s ease;
+      text-decoration: none;
+      font-weight: 700;
+
+    &:hover {
+        text-decoration: underline;
+    }
   }
 }
 
-a {
-  color: #0C0C0A;
-  transition: all 0.1s ease;
-  text-decoration: none;
-  font-weight: 700;
 
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 h4 {
   margin: 0;
-  @include breakpoint(sm){
-      font-size: 3em;
-    }
+
 }
 
 .madeby {
@@ -146,19 +138,7 @@ h4 {
   }
 }
 
-ul, li {
-  font-size: 1em;
-  @include breakpoint(sm){
-      font-size: 2em;
-    }
-}
 
-
-h3 {
-  @include breakpoint(sm){
-      font-size: 5em;
-    }
-}
 
 //.class  {
 //  @include breakpoint(sm){
